@@ -1,13 +1,45 @@
 # require modules here
+require 'pry'
+require 'yaml'
 
-def load_library
-  # code goes here
+def load_library(file_name)
+  emoticons = YAML.load(File.read(file_name))
+  
+  new_hash = {}
+
+  emoticons.each do |key,value|
+    new_hash[key] = {}
+    new_hash[key][:english] = value[0]
+    new_hash[key][:japanese] = value[1]
+  end
+
+  new_hash
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(emote)
   # code goes here
+ 
+   
+  
 end
+
 
 def get_english_meaning
   # code goes here
 end
+
+#{
+   #"angel" => [ "O:)", "☜(⌒▽⌒)☞" ],
+   #"angry" => [ ">:(", "ヽ(ｏ`皿′ｏ)ﾉ" ],
+   #"bored" => [ ":O", "(ΘεΘ;)" ],
+   #"confused" => [ "%)", "(゜.゜)" ],
+   #"embarrassed" => [ ":$", "(#^.^#)" ],
+   #"fish" => [ "><>", ">゜))))彡" ],
+   #"glasses" => [ "8D", "(^0_0^)" ],
+   #"grinning" => [ "=D", "(￣ー￣)" ],
+   #"happy" => [ ":)", "(＾ｖ＾)" ],
+   #"kiss" => [ ":*", "(*^3^)/~☆" ],
+   #"sad" => [ ":'(", "(Ｔ▽Ｔ)" ],
+   #"surprised" => [ ":o", "o_O" ],
+   #"wink" => [ ";)", "(^_-)" ]
+#}
