@@ -27,7 +27,10 @@ end
 
 def get_english_meaning
   library = load_library(file_path)
-  
+  moticon = library.keys.find do |key|
+    library[key][:japanese] == emoticon
+  end
+  emoticon ? emoticon : "Sorry, this emote isn't available :("
 end
 
 #{
