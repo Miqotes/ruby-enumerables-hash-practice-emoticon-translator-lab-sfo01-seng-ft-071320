@@ -16,21 +16,21 @@ def load_library(file_name)
   emote_hash
 end
 
-def get_japanese_emoticon(emote)
- library = load_library(file_path)
+def get_japanese_emoticon(file_name,emote)
+ library = load_library(file_name)
  emoticon = library.keys.find do |key|
-    library[key][:english] == emoticon
+    library[key][:english] == emote
   end
-  emoticon ? library[emoticon][:japanese] : "Sorry, this emote isn't available :("
+  emote ? library[emoticon][:japanese] : "Sorry, this emote isn't available :("
 end
 
 
-def get_english_meaning
-  library = load_library(file_path)
+def get_english_meaning(file_name, emote)
+  library = load_library(file_name)
   moticon = library.keys.find do |key|
-    library[key][:japanese] == emoticon
+    library[key][:japanese] == emote
   end
-  emoticon ? emoticon : "Sorry, this emote isn't available :("
+  emote ? emoticon : "Sorry, this emote isn't available :("
 end
 
 #{
