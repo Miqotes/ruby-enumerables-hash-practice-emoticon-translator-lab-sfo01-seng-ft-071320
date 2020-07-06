@@ -21,7 +21,7 @@ def get_japanese_emoticon(file_name,emote)
  emote = library.keys.find do |key|
     library[key][:english] == emote
   end
-  emote ? library[emoticon][:japanese] : "Sorry, this emote isn't available :("
+  emote ? library[emote][:japanese] : "Sorry, this emote isn't available :("
 end
 
 
@@ -30,7 +30,7 @@ def get_english_meaning(file_name, emote)
   emote = library.keys.find do |key|
     library[key][:japanese] == emote
   end
-  emote ? emoticon : "Sorry, this emote isn't available :("
+  emote ? emote : "Sorry, this emote isn't available :("
 end
 
 #{
