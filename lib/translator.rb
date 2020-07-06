@@ -18,7 +18,6 @@ end
 
 def get_japanese_emoticon(emote)
  
-   binding.pry
 end
 
 
