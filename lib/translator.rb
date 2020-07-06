@@ -13,7 +13,7 @@ def load_library(file_name)
     emote_hash[key][:japanese] = value[1]
   end
 
-  new_hash
+  emote_hash
 end
 
 def get_japanese_emoticon(emote)
